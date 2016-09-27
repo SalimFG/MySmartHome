@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:background="@drawable/layers"
+    tools:context=".Activities.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lay_circle_data"
+        android:orientation="vertical">
+
+
+        <mysmarthome.londonhydro.com.mysmarthome.CustomViews.CustomScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+
+                <!-- View Pqger to switch between fragments of Listening, Speaking etc. screens -->
+                <mysmarthome.londonhydro.com.mysmarthome.CustomViews.CustomViewPager
+                    android:id="@+id/viewpager_custom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" />
+
+
+                <!-- This layout contains content of profile page, will switch between this layout and view pager accordingly -->
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator_custom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="-150dp"
+                    android:layout_below="@id/viewpager_custom" />
+
+            </RelativeLayout>
+
+        </mysmarthome.londonhydro.com.mysmarthome.CustomViews.CustomScrollView>
+
+
+    </LinearLayout>
+
+    <mysmarthome.londonhydro.com.mysmarthome.HelperClasses.GooeyMenu
+        android:id="@+id/gooey_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_radius="@dimen/big_circle_radius"
+        app:gap_between_menu_fab="@dimen/min_gap"
+        app:menu_radius="@dimen/small_circle_radius"
+        app:no_of_menu="3"
+        android:layout_marginTop="-70dp"
+        android:layout_below="@+id/lay_circle_data"
+        app:menu_drawable="@array/drawable_array"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gooey_menu">
+
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_devices"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_marginBottom="@dimen/cardMarginVertical"
+            android:layout_marginLeft="@dimen/cardMarginHorizontal"
+            android:layout_marginRight="@dimen/cardMarginHorizontal"
+            android:layout_marginTop="@dimen/cardMarginVertical"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#88ffffff"
+            app:cardPreventCornerOverlap="false"
+            app:contentPadding="0dp">
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <mysmarthome.londonhydro.com.mysmarthome.CustomViews.OpensansSemiBoldFont
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Devices"
+                    android:background="#CFD8DC"
+                    android:gravity="center"
+                    android:id="@+id/tv_three_most_exp_rooms" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_view_nest"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="130dp"
+                            card_view:cardBackgroundColor="#00ffffff"
+                            card_view:cardCornerRadius="10dp"
+                            card_view:cardElevation="2dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            app:cardPreventCornerOverlap="false"
+                            android:layout_marginTop="20dp"
+                            >
+                            <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:id="@+id/lay_add_nest_thermostat"
+                            android:visibility="gone">
+
+                            <android.support.design.widget.FloatingActionButton
+                                android:id="@+id/fab_nest_thermostat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="16dp"
+                                android:clickable="true"
+                                android:src="@drawable/plus"
+                                app:layout_anchor="@id/card_view_nest"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                app:layout_anchorGravity="center"/>
+
+                            <mysmarthome.londonhydro.com.mysmarthome.CustomViews.OpensansSemiBoldFont
+                                android:id="@+id/txt_nest_thermostat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="Nest Thermostat"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textAppearance="?android:attr/textAppearanceLarge"/>
+                        </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:id="@+id/lay_details_nest_thermostat"
+                                android:visibility="visible">
+
+                                <FrameLayout
+                                    android:id="@+id/lay_flip_nest"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                </FrameLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_view_philips_light_bulbs"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="130dp"
+                            card_view:cardBackgroundColor="#00ffffff"
+                            card_view:cardCornerRadius="10dp"
+                            card_view:cardElevation="2dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:contentPadding="0dp">
+
+
+                            <LinearLayout
+                                android:id="@+id/lay_philips_add"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                            <android.support.design.widget.FloatingActionButton
+                                android:id="@+id/fab_philips_light_bulbs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="16dp"
+                                android:clickable="true"
+                                android:src="@drawable/plus"
+                                app:layout_anchor="@id/card_view_philips_light_bulbs"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                app:layout_anchorGravity="center"/>
+
+                            <mysmarthome.londonhydro.com.mysmarthome.CustomViews.OpensansSemiBoldFont
+                                android:id="@+id/txt_philips_light_bulbs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="Philips Light Bulbs"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:id="@+id/lay_flip_philips"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                            </FrameLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+                                    android:visibility="gone"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/philips_hue"/>
+                            <LinearLayout
+                                android:id="@+id/lay_philips_switch"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <mysmarthome.londonhydro.com.mysmarthome.CustomViews.OpensansSemiBoldFont
+                                    android:id="@+id/txt_current_light_working"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:text="2"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+                                <mysmarthome.londonhydro.com.mysmarthome.CustomViews.OpensansSemiBoldFont
+                                    android:id="@+id/txt_seperator"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|fill_vertical"
+                                    android:layout_gravity="center|fill_vertical"
+                                    android:layout_marginTop="10dp"
+                                    android:text="/"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+                                <mysmarthome.londonhydro.com.mysmarthome.CustomViews.OpensansSemiBoldFont
+                                    android:id="@+id/txt_total_lights"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:text="3"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+                                <ToggleButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ToggleButton"
+                                android:id="@+id/toggleButton"
+                                android:layout_below="@+id/barBri"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="54dp"
+                                android:visibility="visible"
+                                android:layout_gravity="center_horizontal" />
+
+                            </LinearLayout>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lay_nest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_wemo"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="130dp"
+                        card_view:cardBackgroundColor="#00ffffff"
+                        card_view:cardCornerRadius="10dp"
+                        card_view:cardElevation="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardPreventCornerOverlap="false"
+                        android:layout_marginTop="20dp"
+                        >
+
+                        <FrameLayout
+                            android:id="@+id/lay_flip_wemo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <android.support.design.widget.FloatingActionButton
+                                android:id="@+id/fab_wemo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="16dp"
+                                android:clickable="true"
+                                android:src="@drawable/plus"
+                                app:layout_anchor="@id/card_wemo"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                app:layout_anchorGravity="center"/>
+
+                            <mysmarthome.londonhydro.com.mysmarthome.CustomViews.OpensansSemiBoldFont
+                                android:id="@+id/txt_wemo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="Belkin Wemo"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+                        </LinearLayout>
+
+
+                    </android.support.v7.widget.CardView>
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_view_second_row"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="130dp"
+                        card_view:cardBackgroundColor="#00ffffff"
+                        card_view:cardCornerRadius="10dp"
+                        card_view:cardElevation="2dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:contentPadding="0dp">
+
+                        <FrameLayout
+                            android:id="@+id/lay_flip_echo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/fab_amazon_echo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:clickable="true"
+                            android:src="@drawable/plus"
+                            app:layout_anchor="@id/fab_amazon_echo"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            app:layout_anchorGravity="center"/>
+
+                        <mysmarthome.londonhydro.com.mysmarthome.CustomViews.OpensansSemiBoldFont
+                            android:id="@+id/txt_amazon_echo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:text="Amazon Echo"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+</ScrollView>

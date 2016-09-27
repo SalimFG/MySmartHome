@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">MySmartHome</string>
+    <string name="str_my_smart_home">my<b>SmartHome</b></string>
+    <string name="str_time_spent_course"><font size="15">Usage(Kw)</font></string>
+    <string name="str_accuracy_course"><font size="15">Amount saved ($)</font> </string>
+
+    <string name="str_time_spent_speaking_value"><font size="18">20</font></string>
+    <string name="str_accuracy_speaking_value"><font size="18">75</font> </string>
+
+    <string name="str_time_spent_listening_value"><font size="18">10</font> </string>
+    <string name="str_accuracy_listening_value"><font size="18">25</font> </string>
+
+    <!--Philips-->
+    <string name="title_error">Error</string>
+    <string name="press_pushlink_button">Press the link button on the bridge</string>
+    <string name="txt_pushlink">Pushlink</string>
+    <string name="btn_ok">Ok</string>
+    <string name="txt_select_smartbridge">Please select a bridge to use for this app</string>
+    <string name="connecting">Connecting ...</string>
+    <string name="menu_find_bridge">Find new Bridge</string>
+    <string name="search_progress">Searching ...</string>
+
+    <string name="away_state_home">Home</string>
+    <string name="away_state_away">Away</string>
+    <string name="thermostat_off">Off</string>
+    <string name="ellipsis">…</string>
+    <string name="curr_temp">Current temp:</string>
+    <string name="decrease_temp">-</string>
+    <string name="increase_temp">+</string>
+</resources>

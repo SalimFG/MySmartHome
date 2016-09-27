@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <array name="drawable_array">
+        <item>@drawable/selector_bulb</item>
+        <item>@drawable/selector_menu</item>
+        <item>@drawable/selector_outlet</item>
+    </array>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="CustomButtom">
+		<attr name="font" format="string" />
+	</declare-styleable>
+
+
+	<declare-styleable name="GooeyMenu">
+
+		<attr name="no_of_menu" format="integer" />
+		<attr name="fab_radius" format="dimension" />
+		<attr name="menu_radius" format="dimension" />
+		<attr name="gap_between_menu_fab" format="dimension" />
+		<attr name="menu_drawable" format="reference" />
+	</declare-styleable>
+
+	<declare-styleable name="ProgressWheel">
+		<attr name="matProg_progressIndeterminate" format="boolean" />
+		<attr name="matProg_barColor" format="color" />
+		<attr name="matProg_rimColor" format="color" />
+		<attr name="matProg_rimWidth" format="dimension" />
+		<attr name="matProg_spinSpeed" format="float" />
+		<attr name="matProg_barSpinCycleTime" format="integer" />
+		<attr name="matProg_circleRadius" format="dimension" />
+		<attr name="matProg_fillRadius" format="boolean" />
+		<attr name="matProg_barWidth" format="dimension" />
+		<attr name="matProg_linearProgress" format="boolean" />
+	</declare-styleable>
+
+	<declare-styleable name="ColorArcProgressBar">
+		<attr name="back_color" format="color"/>
+		<attr name="front_color1" format="color"/>
+		<attr name="front_color2" format="color"/>
+		<attr name="front_color3" format="color"/>
+		<attr name="back_width" format="dimension"/>
+		<attr name="front_width" format="dimension"/>
+		<attr name="is_need_title" format="boolean"/>
+		<attr name="is_need_content" format="boolean"/>
+		<attr name="is_need_unit" format="boolean"/>
+		<attr name="is_need_dial" format="boolean"/>
+		<attr name="string_title" format="string"/>
+		<attr name="string_unit" format="string"/>
+		<attr name="total_engle" format="integer"/>
+		<attr name="current_value" format="float"/>
+		<attr name="max_value" format="float"/>
+
+	</declare-styleable>
+
+	<!-- FloatingEditText Attribute -->
+	<declare-styleable name="FloatingEditText">
+		<attr name="floating_edit_text_hint_scale" format="float"/>
+		<attr name="floating_edit_text_color" format="color"/>
+		<attr name="floating_edit_text_highlighted_color" format="color"/>
+		<attr name="floating_edit_text_error_color" format="color"/>
+		<attr name="floating_edit_text_underline_height" format="dimension"/>
+		<attr name="floating_edit_text_underline_highlighted_height" format="dimension"/>
+	</declare-styleable>
+</resources>

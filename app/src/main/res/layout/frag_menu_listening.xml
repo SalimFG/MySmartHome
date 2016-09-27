@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <FrameLayout android:id="@+id/frameCircle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+    <com.dlazaro66.wheelindicatorview.WheelIndicatorView
+        android:id="@+id/wheel_indicator_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        app:backgroundColor="#ffffff"
+        app:filledPercent="40"
+        app:itemsLineWidth="5dp"
+       />
+
+
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imgVwIcon"
+            />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+
+            <mysmarthome.londonhydro.com.mysmarthome.CustomViews.OpensansBoldFont
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="100"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:id="@+id/txt_profil_progress"
+                android:visibility="visible"
+                android:layout_below="@id/imgVwIcon"
+               />
+        </LinearLayout>
+
+    </LinearLayout>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llTimeAndAccuracy"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frameCircle"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <mysmarthome.londonhydro.com.mysmarthome.CustomViews.OpensansRegularFont
+                android:id="@+id/txtVwTimeSpent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/str_time_spent_course"
+                android:textColor="@android:color/white" />
+
+            <mysmarthome.londonhydro.com.mysmarthome.CustomViews.OpensansRegularFont
+                android:id="@+id/txtVwTimeSpentValue"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/str_time_spent_speaking_value"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <mysmarthome.londonhydro.com.mysmarthome.CustomViews.OpensansRegularFont
+                android:id="@+id/txtVwAccuracy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:gravity="center"
+                android:text="@string/str_accuracy_course"
+                android:textColor="@android:color/white" />
+
+            <mysmarthome.londonhydro.com.mysmarthome.CustomViews.OpensansRegularFont
+                android:id="@+id/txtVwAccuracyValue"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:gravity="center"
+                android:text="@string/str_accuracy_speaking_value"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

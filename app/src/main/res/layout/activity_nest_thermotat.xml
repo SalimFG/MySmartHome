@@ -1,0 +1,298 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context=".Activities.NestThermostatActivity">
+
+    <LinearLayout
+        android:id="@+id/lay_nest_therm_logo"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#01a185"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/curr_temp"
+            android:textSize="18sp"
+            android:textColor="@color/mb_white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ambient_temp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/ellipsis"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/mb_white"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/nest_therm"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/lay_thermo_arcs"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_below="@+id/lay_nest_therm_logo">
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="-15dp"
+                android:layout_height="match_parent">
+
+                <mysmarthome.londonhydro.com.mysmarthome.HelperClasses.ColorArcProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/bar2"
+                    app:is_need_content="true"
+                    app:front_color1="#FFA726"
+                    app:front_color2="#FB8C00"
+                    app:front_color3="#E65100"
+                    app:max_value="40"
+                    app:back_width="2dp"
+                    app:front_width="10dp"
+                    app:total_engle="270"
+                    app:is_need_unit="true"
+                    app:string_unit="°F"
+                    app:is_need_title="true"
+                    app:string_title="Heat"
+                    app:back_color="@android:color/darker_gray"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="match_parent"
+                android:background="#e3e3e3"
+                >
+
+            </View>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+            <mysmarthome.londonhydro.com.mysmarthome.HelperClasses.ColorArcProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bar2cold"
+                app:is_need_content="true"
+                app:front_color1="#29B6F6"
+                app:front_color2="#039BE5"
+                app:front_color3="#01579B"
+                app:max_value="40"
+                app:back_width="2dp"
+                app:front_width="10dp"
+                app:total_engle="270"
+                app:is_need_unit="true"
+                app:string_unit="°F"
+                app:is_need_title="true"
+                app:string_title="Cool"
+                app:back_color="@android:color/darker_gray"
+                />
+            </FrameLayout>
+        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lay_current_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_thermo_arcs"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/structure_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/textView"
+            android:layout_toStartOf="@+id/textView"
+            android:paddingEnd="0dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="0dp"
+            android:paddingStart="5dp"
+            android:text="@string/ellipsis"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/structure_away_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/structure_name" />
+
+
+
+
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/ambient_temp"
+            android:text="Logout" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/lay_heat_and_cool_modes"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="-20dp"
+        android:weightSum="2"
+        android:layout_below="@+id/lay_thermo_arcs"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/heat"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:background="@drawable/hot"
+            android:text="Heat" />
+        </FrameLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#e3e3e3"
+            />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/cool"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:background="@drawable/cold_press"
+            android:scaleType="fitXY"
+             />
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/arcs_hor_seperator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/lay_heat_and_cool_modes"
+        android:background="#e3e3e3"
+        />
+
+    <RelativeLayout
+        android:layout_below="@+id/lay_heat_and_cool_modes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <mysmarthome.londonhydro.com.mysmarthome.CustomViews.FloatingEditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:id="@+id/editTextTemp"
+            android:hint="Set Temperature"
+            android:inputType="numberDecimal"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:src="@drawable/icon_check"
+        android:id="@+id/btn_plus_salim"
+        app:fabSize="normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="#01a185"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_above="@+id/hvac_mode_control_container"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:paddingLeft="5dp"-->
+        <!--android:text="Thermostat mode:"-->
+        <!--android:textSize="18dp"-->
+        <!--android:textStyle="bold" />-->
+
+
+
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="myPlus"-->
+
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true" />-->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mymoin"
+        android:id="@+id/btn_moin_salim"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/hvac_mode_control_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/heat_cool"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Range" />
+        <Button
+            android:id="@+id/off"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Off" />
+    </LinearLayout>
+    
+</RelativeLayout>

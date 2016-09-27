@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorPrimaryDark">#388E3C</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="listview_divider_color">#55CCCCCC</color>
+    <color name="circle_color">#ff53d0c0</color>
+
+
+
+    <color name="nliveo_blue_colorPrimary">#2196F3</color>
+    <color name="nliveo_blue_colorPrimaryDark">#1976D2</color>
+    <color name="nliveo_blue_alpha_colorPrimaryDark">#801976D2</color>
+
+    <color name="nliveo_green_colorPrimary">#4CAF50</color>
+    <color name="nliveo_green_colorPrimaryDark">#388E3C</color>
+    <color name="nliveo_green_alpha_colorPrimaryDark">#80388E3C</color>
+
+    <color name="nliveo_red_colorPrimary">#F44336</color>
+    <color name="nliveo_red_colorPrimaryDark">#D32F2F</color>
+    <color name="nliveo_red_alpha_colorPrimaryDark">#80D32F2F</color>
+
+    <color name="nliveo_indigo_colorPrimary">#3F51B5</color>
+    <color name="nliveo_indigo_colorPrimaryDark">#30379F</color>
+    <color name="nliveo_indigo_alpha_colorPrimaryDark">#8030379F</color>
+
+    <color name="nliveo_orange_colorPrimary">#FF9800</color>
+    <color name="nliveo_orange_colorPrimaryDark">#F57C00</color>
+    <color name="nliveo_orange_alpha_colorPrimaryDark">#80F57C00</color>
+
+    <color name="nliveo_lime_colorPrimary">#CDDC39</color>
+    <color name="nliveo_lime_colorPrimaryDark">#AFB42B</color>
+    <color name="nliveo_lime_alpha_colorPrimaryDark">#80AFB42B</color>
+
+    <color name="nliveo_cyan_colorPrimary">#00BCD4</color>
+    <color name="nliveo_cyan_colorPrimaryDark">#0097A7</color>
+    <color name="nliveo_cyan_alpha_colorPrimaryDark">#800097A7</color>
+
+    <color name="nliveo_brown_colorPrimary">#795548</color>
+    <color name="nliveo_brown_colorPrimaryDark">#5D4037</color>
+    <color name="nliveo_brown_alpha_colorPrimaryDark">#805D4037</color>
+
+    <color name="nliveo_teal_colorPrimary">#009688</color>
+    <color name="nliveo_teal_colorPrimaryDark">#00796B</color>
+    <color name="nliveo_teal_alpha_colorPrimaryDark">#8000796B</color>
+
+    <color name="nliveo_blue_gray_colorPrimary">#607D8B</color>
+    <color name="nliveo_blue_gray_colorPrimaryDark">#80455A64</color>
+    <color name="nliveo_blue_gray_alpha_colorPrimaryDark">#5a5e60</color>
+
+    <!--MoghinColors-->
+
+    <color name="mb_white">#ffffff</color>
+    <color name="mb_blue">#ff0099cc</color>
+    <color name="mb_blue_dark">#ff00719b</color>
+    <color name="mb_purple">#ffaa66cc</color>
+    <color name="mb_purple_dark">#ff8855aa</color>
+    <color name="mb_green">#ff99cc00</color>
+    <color name="mb_green_dark">#ff6d9b00</color>
+    <color name="mb_red">#ffff4444</color>
+    <color name="mb_red_dark">#ffcd3a3a</color>
+    <color name="mb_gray">#ffdedede</color>
+    <color name="background_card">#FEFEFE</color>
+    <color name="black">#ff000000</color>
+
+    <color name="heat">#E15E1F</color>
+    <color name="cool">#006BEC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="off">#222222</color>
+
+    <color name="floating_edit_text_color">#ffc8c8c8</color>
+    <color name="floating_edit_text_highlighted_color">#ff3f51b5</color>
+    <color name="floating_edit_text_highlighted_color_black">#ff01a185</color>
+
+    <color name="floating_edit_text_error_color">#DB4437</color>
+</resources>
